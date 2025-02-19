@@ -28,5 +28,4 @@ Avg Waiting Time: 2.67 ms
 - **Algorithm:** Preemptive SJF with FCFS tie-breaking.  
 - **Output:** Scheduling results & performance metrics.  
 
-## Notes  
-Ensure correct **context switching**, **event handling**, and **Gantt chart representation**.
+
