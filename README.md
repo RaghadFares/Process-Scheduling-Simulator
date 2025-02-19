@@ -1,5 +1,3 @@
-# Operating-system-
-
 # Process Scheduling Simulator  
 
 ## Overview  
