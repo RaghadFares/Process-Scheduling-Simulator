@@ -1,29 +1,19 @@
-# Process Scheduling Simulator  
+# Process Scheduling Simulator - SRTF (Shortest Remaining Time First)
 
-## Overview  
-This project implements a **Shortest Remaining Time First (Preemptive SJF) Scheduling Algorithm**, using **FCFS for tie-breaking**. It simulates process execution in a **multiprogramming environment** with **event-driven scheduling**.  
+## **Team Members**  
+- **[Team Leader Name]** - ID: [Your ID]  
+- **[Raghad Almutairi]** - ID: [443200793]  
+- **[Team Member 2]** - ID: [Their ID]  
 
-## Features  
-- **Preemptive SJF Scheduling** with context switching (**1ms overhead**).  
-- **Event Queue** for handling process arrivals, execution, and termination.  
-- **Performance Metrics**:  
-  - **CPU Utilization**  
-  - **Average Turnaround Time**  
-  - **Average Waiting Time**  
-- **Gantt Chart Visualization**.  
-- **User Input**: Number of processes, arrival times, and burst times.  
+## **Project Overview**  
+This project simulates process scheduling using the **Shortest Remaining Time First (SRTF)** algorithm. The system calculates **average waiting time**, **average turnaround time**, and **CPU utilization**, and visualizes the execution of processes using a **Gantt chart**. The program also supports context switching and preemption.
 
-## Output Example  
-```
-Gantt Chart: | P1 | P2 | P3 | P2 | P1 |
-CPU Utilization: 92.3%
-Avg Turnaround Time: 5.67 ms
-Avg Waiting Time: 2.67 ms
-```
+## **Features**  
+- **Shortest Remaining Time First (SRTF)** Scheduling Algorithm.
+- **Context Switching**: Simulates a 1ms context switch time between processes.
+- **Performance Metrics**: Calculates and outputs **Average Turnaround Time**, **Average Waiting Time**, and **CPU Utilization**.
+- **Gantt Chart**: Displays the order and timing of processes in an easy-to-read format.
 
-## Requirements  
-- **Input:** Process count, arrival times, burst times.  
-- **Algorithm:** Preemptive SJF with FCFS tie-breaking.  
-- **Output:** Scheduling results & performance metrics.  
-
-
+## **How to Run the Program**  
+1. Clone this repository.
+2. Compile the `ProcessScheduler.java` file using the command:
