@@ -1,13 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.osproject1;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
+package com.mycompany.os;
 
 
 /**
@@ -207,7 +202,19 @@ Handling CPU Idle Time:
 
                 // Set the current process to the one that is being scheduled.
                 currentProcess = p;
-                ganttChart.add(currentTime + "-" + (currentTime + 1) + "  P" + p.id);
+                
+                                int executionTime = Math.min(p.remainingTime, 
+                    (index < processes.size() ? processes.get(index).arrivalTime - currentTime : p.remainingTime));
+
+                if (!ganttChart.isEmpty() && ganttChart.get(ganttChart.size() - 1).contains("P" + p.id)) {
+                    String lastEntry = ganttChart.remove(ganttChart.size() - 1);
+                    String[] parts = lastEntry.split("-");
+                    ganttChart.add(parts[0] + "-" + (currentTime + executionTime) + "  P" + p.id);
+                } else {
+                    ganttChart.add(currentTime + "-" + (currentTime + executionTime) + "  P" + p.id);
+                }
+
+
                 p.remainingTime--; // Decrease the remaining time of the current process.
                 currentTime++; // Move forward by 1 ms (the time it takes to execute the process).
                 cpuActiveTime++; // Count this as active CPU time.
